@@ -20,7 +20,6 @@ function App() {
         <NavItem icon={<PlusIcon />} />
         <NavItem icon={<BellIcon />} />
         <NavItem icon={<MessengerIcon />} />
-
         <NavItem icon={<CaretIcon />}>
           <DropdownMenu />
         </NavItem>
@@ -44,7 +43,6 @@ function NavItem(props) {
       <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
         {props.icon}
       </a>
-
       {open && props.children}
     </li>
   );
@@ -65,12 +63,10 @@ function DropdownMenu() {
 
   return (
     <div className="dropdown">
-      <div className="menu">
-        <DropdownItem>My profile</DropdownItem>
-        <DropdownItem leftIcon={<CogIcon />} rightIcon={<ChevronIcon />}>
-          Settings
-        </DropdownItem>
-      </div>
+      <DropdownItem>My profile</DropdownItem>
+      <DropdownItem leftIcon={<CogIcon />} rightIcon={<ChevronIcon />}>
+        Settings
+      </DropdownItem>
     </div>
   );
 }
